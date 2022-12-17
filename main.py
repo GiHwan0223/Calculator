@@ -29,7 +29,7 @@ class Calculator(QWidget):
         self.show()
     
     def activeMessage(self):
-        QMessageBox.information(self, "information", "Button clocked!!")
+        #QMessageBox.information(self, "information", "Button clocked!!")
         self.te1.appendPlainText("Butten cliecked.")
 
 if __name__ == '__main__':
