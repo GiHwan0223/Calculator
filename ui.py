@@ -16,11 +16,13 @@ class View(QWidget):
         self.te1 = QPlainTextEdit()
         self.te1.setReadOnly(True)
         
-        self.btn1 = QPushButton('Message', self)
+        self.btn1 = QPushButton('Calc', self) #change Message to Calc
         self.btn2 = QPushButton('Clear', self)
         
         self.le1 = QLineEdit('0', self)
         self.le1.setAlignment(QtCore.Qt.AlignRight)
+        self.le1.setFocus(True) #set focus to this object
+        self.le1.selectAll() #select a whole text
         
         self.le2 = QLineEdit('0', self)
         self.le2.setAlignment(QtCore.Qt.AlignRight)
@@ -51,8 +53,8 @@ class View(QWidget):
         self.setWindowIcon(QIcon('icon.png'))
         self.resize(256,256)
         self.show()
-
-    def activateMessage(self):
+        
+    def setDisplay(self): #change activateMessage to setDisplay
         self.te1.appendPlainText("Button clicked.")
     
     def clearMessage(self):
