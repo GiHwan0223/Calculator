@@ -28,7 +28,6 @@ class View(QWidget):
         self.le2.setAlignment(QtCore.Qt.AlignRight)
         
         self.cb = QComboBox(self)
-
         self.cb.addItems(['+','-','*','/','^']) # add a power operator into combobox
         
         hbox_formular = QHBoxLayout()
@@ -56,8 +55,7 @@ class View(QWidget):
         self.show()
         
     def setDisplay(self, text): #change activateMessage to setDisplay
-        self.te1.appendPlainText("Button clicked.")
-    
+        self.te1.appendPlainText(text)
     def clearMessage(self):
         self.te1.clear()
 
