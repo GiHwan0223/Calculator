@@ -11,8 +11,10 @@ class Control:
         
         if operator == '+':
             return f'{num1} + {num2} = {self.sum(num1,num2)}'
+        elif operator == '-':
+            return f'{num1} - {num2} = {self.subtraction(num1, num2)}'
         else:
-            return "Calculation Error!"
+            return "Calculation Error...(err_calculate)"  #distinguish Calculation Error message
     
     def connectSignals(self):
         self.view.btn1.clicked.connect(lambda:\
@@ -23,6 +25,11 @@ class Control:
         try:
             return a+b
         except:
-            return "Calculation Error"
+            return "Calculation Error...(err_sum)" #distinguish Calculation Error message
 
+    def subtraction(self, a, b):
+        try:
+            return a-b
+        except:
+            return "Calculation Error...(err_subtraction)" #distinguish Calculation Error message
 
