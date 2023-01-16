@@ -28,7 +28,7 @@ class View(QWidget):
         self.le2.setAlignment(QtCore.Qt.AlignRight)
         
         self.cb = QComboBox(self)
-        self.cb.addItems(['+','-','*','/','^']) # add a power operator into combobox
+        self.cb.addItems(['+','-','*','/','^', '%']) # add a power and quotient operator into combobox
         
         hbox_formular = QHBoxLayout()
         hbox_formular.addWidget(self.le1)
