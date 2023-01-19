@@ -25,11 +25,11 @@ class Control:
         try:
             return a+b
         except:
-            return "Calculation Error...(err_sum)" #distinguish Calculation Error message
+            return "Calculation Error...(err_sum)" #Sum Error message
 
     def subtraction(self, a, b):
         try:
             return a-b
         except:
-            return "Calculation Error...(err_subtraction)" #distinguish Calculation Error message
+            return "Calculation Error...(err_subtraction)" #subtraction error Message
 
