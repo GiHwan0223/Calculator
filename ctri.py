@@ -15,6 +15,10 @@ class Control:
             return f'{num1} - {num2} = {self.subtraction(num1, num2)}'
         elif operator == '*':
             return f'{num1} * {num2} = {self.multiple(num1, num2)}'
+        elif operator == '/':
+            return f'{num1} / {num2} = {self.power(num1, num2)}'
+        elif operator == '%':
+            return f'{num1} % {num2} = {self.remain(num1, num2)}'
         else:
             return "Calculation Error...(err_calculate)"  #distinguish Calculation Error message
     
@@ -41,4 +45,20 @@ class Control:
         except:
             return "Calculation Error...(error_multiple)"
 
+    def divide(self, a, b):
+        try:
+            return a/b
+        except:
+            return "Calculation Error...(error_multiple)"
+    
+    def power(self, a, b):
+        try:
+            return pow(a,b)
+        except:
+            return "Calculation Error...(error_power)"
 
+    def remain(self, a, b):
+        try:
+            return a%b
+        except:
+            return "Calculation Error...(error_remain)"
