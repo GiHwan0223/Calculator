@@ -16,7 +16,9 @@ class Control:
         elif operator == '*':
             return f'{num1} * {num2} = {self.multiple(num1, num2)}'
         elif operator == '/':
-            return f'{num1} / {num2} = {self.power(num1, num2)}'
+            return f'{num1} / {num2} = {self.divide(num1, num2)}'
+        elif operator == '^':
+            return f'{num1} ^ {num2} = {self.power(num1, num2)}'
         elif operator == '%':
             return f'{num1} % {num2} = {self.remain(num1, num2)}'
         else:
