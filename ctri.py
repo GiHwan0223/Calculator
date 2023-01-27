@@ -59,7 +59,7 @@ class Control:
     def power(self, a, b):
         try:
             if(a==0):
-                raise Exception("Base error")
+                raise Exception("Error. Base cannot be 0")
         except Exception as e:
             return e
             
