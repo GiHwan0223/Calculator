@@ -49,16 +49,22 @@ class Control:
 
     def divide(self, a, b):
         try:
-            return a/b
-        except:
-            return "Calculation Error...(error_multiple)"
+            if(b==0):
+                raise Exception("Error. Not able to divide by 0")
+        except Exception as e:
+            return e
+
+        return a/b
     
     def power(self, a, b):
         try:
-            return pow(a,b)
-        except:
-            return "Calculation Error...(error_power)"
-
+            if(a==0):
+                raise Exception("Error. Base cannot be 0")
+        except Exception as e:
+            return e
+            
+        return pow(a,b)
+        
     def remain(self, a, b):
         try:
             return a%b
