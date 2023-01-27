@@ -49,9 +49,12 @@ class Control:
 
     def divide(self, a, b):
         try:
-            return a/b
-        except:
-            return "Calculation Error...(error_multiple)"
+            if(b==0):
+                raise Exception("Error. A divisor is 0")
+        except Exception as e:
+            return e
+
+        return a/b
     
     def power(self, a, b):
         try:
