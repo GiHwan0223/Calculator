@@ -58,10 +58,13 @@ class Control:
     
     def power(self, a, b):
         try:
-            return pow(a,b)
-        except:
-            return "Calculation Error...(error_power)"
-
+            if(a==0):
+                raise Exception("Base error")
+        except Exception as e:
+            return e
+            
+        return pow(a,b)
+        
     def remain(self, a, b):
         try:
             return a%b
