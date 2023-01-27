@@ -50,7 +50,7 @@ class Control:
     def divide(self, a, b):
         try:
             if(b==0):
-                raise Exception("Error. A divisor is 0")
+                raise Exception("Error. Not able to divide by 0")
         except Exception as e:
             return e
 
