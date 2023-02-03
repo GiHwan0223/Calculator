@@ -20,7 +20,7 @@ class Control:
         elif operator == '^':
             return f'{num1} ^ {num2} = {self.power(num1, num2)}'
         elif operator == '%':
-            return f'{num1} % {num2} = {self.remain(num1, num2)}' # just for practice 6.1
+            return f'{num1} % {num2} = {self.mod(num1, num2)}' # update function name to mod
         else:
             return "Calculation Error...(err_calculate)"  #distinguish Calculation Error message
     
@@ -65,7 +65,7 @@ class Control:
             
         return pow(a,b)
         
-    def remain(self, a, b):
+    def mod(self, a, b): #change a function name to mod
         try:
             return a%b
         except:
