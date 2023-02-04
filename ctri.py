@@ -16,11 +16,7 @@ class Control:
         elif operator == '*':
             return f'{num1} * {num2} = {self.multiple(num1, num2)}'
         elif operator == '/':
-            return f'{num1} / {num2} = {self.divide(num1, num2)}'
-        elif operator == '^':
-            return f'{num1} ^ {num2} = {self.power(num1, num2)}'
-        elif operator == '%':
-            return f'{num1} % {num2} = {self.mod(num1, num2)}' # update function name to mod
+            return f'{num1} / {num2} = {self.divide(num1, num2)}'        
         else:
             return "Calculation Error...(err_calculate)"  #distinguish Calculation Error message
     
@@ -55,18 +51,3 @@ class Control:
             return e
 
         return a/b
-    
-    def power(self, a, b):
-        try:
-            if(a==0):
-                raise Exception("Error. Base cannot be 0")
-        except Exception as e:
-            return e
-            
-        return pow(a,b)
-        
-    def mod(self, a, b): #change a function name to mod
-        try:
-            return a%b
-        except:
-            return "Calculation Error...(error_remain)"
